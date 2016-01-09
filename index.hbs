@@ -6,7 +6,12 @@
 	{{#foreach posts}}
 
 		<article class="article_typesome">
-				
+                {{#if image}}
+                <div class="article_image" style="background: url({{image}}) no-repeat center center; background-size: cover;">
+                    <a href="{{{url}}}" rel="bookmark">
+                    <div class="article_image_fade article_image_fade_ie"></div></a>
+                </div>
+                {{/if}}
 				<header class="postheader_typesome">
 					<ul>
                         {{#if author.image}}<li><img class="author-thumb_typesome" src="{{author.image}}" alt="Author image" nopin="nopin" /></li>{{/if}}
